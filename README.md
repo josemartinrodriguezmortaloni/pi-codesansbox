@@ -2,7 +2,7 @@
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄⡀⠀⠀
  Persistent Python and Bun cells inside Pi, with tool calls from code.⠀⠀⠀⠀⠀⠀⣴⠋⠀⣠⣄⠀⠀⣠⣄⠀⠀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⡄⠀
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠘⢿⡿⠃⠘⢧⡼⠃⠘⢧⡼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀
- bun install && pi install "$PWD"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡇⠀
+ pi install git:github.com/josemartinrodriguezmortaloni/pi-codesansbox⠀⠀⠀⠀⠀⠀⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡇⠀
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⡇⠀
  ⚠ Status: 0.1.0. Built and tested on Pi 0.99.2 and Bun 1.3.13.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⢀⠀⠀⡀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⣱⠀⢈⡆⠀⣱⠀⠀⠰⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠀⠀⠶⠶⠶⠶⠶⠶⠶⠀⠀⠀⠀⠀⠀⡇⠀
@@ -47,6 +47,7 @@ It brings the `eval` tool of [oh-my-pi](https://github.com/can1357/oh-my-pi) to 
   <a href="https://www.python.org"><img alt="Python 3" src="https://img.shields.io/badge/PYTHON-3-0a0a0a.svg?style=for-the-badge&amp;logo=python&amp;labelColor=000000" height="28"></a>
   <a href="https://bun.sh"><img alt="Bun 1.3" src="https://img.shields.io/badge/BUN-1.3-0a0a0a.svg?style=for-the-badge&amp;logo=bun&amp;labelColor=000000" height="28"></a>
   <a href="https://www.typescriptlang.org"><img alt="TypeScript" src="https://img.shields.io/badge/TYPESCRIPT-STRICT-0a0a0a.svg?style=for-the-badge&amp;logo=typescript&amp;labelColor=000000" height="28"></a>
+  <a href="https://github.com/josemartinrodriguezmortaloni/pi-codesansbox/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/josemartinrodriguezmortaloni/pi-codesansbox.svg?style=for-the-badge&amp;labelColor=000000" height="28"></a>
 </p>
 
 ## Install
@@ -57,20 +58,20 @@ You need:
 - **Python 3** on the `PATH` as `python3`. No Jupyter and no ipykernel. matplotlib only if you want figures.
 - **Bun** on the `PATH`. The JavaScript kernel runs on Bun; the extension itself runs inside Pi on Node.
 
-Install from a clone:
+```bash
+pi install git:github.com/josemartinrodriguezmortaloni/pi-codesansbox
+```
+
+Pi clones the repo and installs its two runtime dependencies, `acorn` and `@resvg/resvg-js`. The package lands in `~/.pi/agent/settings.json`; add `-l` to install it for the current project only. To install from a clone:
 
 ```bash
-git clone <repository-url> pi-codesanbox-execution
-cd pi-codesanbox-execution
+git clone https://github.com/josemartinrodriguezmortaloni/pi-codesansbox.git
+cd pi-codesansbox
 bun install
 pi install "$PWD"
 ```
 
-`bun install` adds the two runtime dependencies, `acorn` and `@resvg/resvg-js`. `pi install` adds the package to `~/.pi/agent/settings.json`; add `-l` to install it for the current project only. To try it for one run without changing settings:
-
-```bash
-pi -e "$PWD"
-```
+To try it for one run without changing settings, use `pi -e "$PWD"` from the clone.
 
 ## Get started
 
