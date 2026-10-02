@@ -1,46 +1,32 @@
 ```text
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⣀⠀⠀⢀⡔
- ⠀Persistent Python and Bun cells inside Pi, with tool calls from code.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣬⣮⣷⣦⣿⣾⣿⣾⣾⣿⣿⣿⣖⠆⠀⣠
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠈⣒⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣃⣠⡀
- ⠀pi install git:github.com/josemartinrodriguezmortaloni/pi-codesansbox⠀⠀⠀⠀⠀⠀⣰⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢄⡈⣱⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢦
- ⠀⚠ Status: 0.1.0. Built and tested on Pi 0.99.2 and Bun 1.3.13.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡾⠁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣹⣿⣿⣿⣿⣿⣿⣏⢽⣯⠉⡮⡿⠳⣻⡽⣿⣿⢿⣿⣿⣿⣿⣿⠖⠁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣻⣿⣿⣿⡕⣷⡅⠈⠈⠀⠀⢄⠀⠀⠐⠁⣿⢪⣿⣿⣿⢿
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠽⣿⣿⣿⣾⡄⠀⠐⠀⢠⢱⠀⠐⠀⢀⣿⣿⣿⠹⠋⠘
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⢿⡷⡀⠐⣨⣀⠠⠠⠤⠂⣰⡿⠏⠓
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠉⡀⣟⢾⡁⠐⠈⠃⢀⠼⡃⢑⢠
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⠇⠂⣨⡇⠀⡈⠳⠤⠆⣋⢸⠁⠄⠄⠙⠢⢤⣀⡀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⡶⣷⣶⣶⣶⣶⣶⣶⢿⢿⡿⠋⠀⢀⠙⠤⡀⢀⠀⠀⠰⠃⢸⠀⠐⠀⡈⢠⡤⠚⠁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⡢⠢⠹⢷⡆⢅⠕⡐⢔⠻⠲⢤⣄⣠⣠⡀⠉⢀⠰⡀⠌⠀⠘⢦⠠⣤⣴⣾⣷⣤⣀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣷⣬⣬⡪⠨⣻⡆⢕⠨⡂⢅⠣⠡⡊⢽⣟⠁⢀⢀⡠⡀⠀⠁⢠⠌⣠⠴⣟⠫⢛⠿⢿⣷⣦⣄⡀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡻⡿⠿⠟⢟⠣⡑⢌⢿⡠⡑⢌⠢⡑⡑⢌⠢⡙⣿⡍⠁⠉⢺⣆⣡⠿⣎⠀⠀⢯⠨⡂⡪⢐⠌⡊⡛⡻⣿⣆
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡕⡨⠨⡊⣢⢑⠌⡂⢿⡆⠪⡐⢅⠢⡊⢔⠡⡂⡪⢻⣄⠠⠀⠙⣯⣰⣗⠀⢈⢸⣧⡂⡪⢐⠅⡪⢐⠔⢼⣿⠇
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢿⣿⡟⢍⡼⠣⠡⡊⠔⣹⣧⠑⢌⠢⡑⢌⠢⡑⡰⠨⡨⢳⡄⠀⠄⠙⣿⣿⠂⠀⠨⡆⡛⢦⣑⠌⡢⢑⠌⣺⡟⡇
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢏⣾⣏⡶⠫⡘⢌⠪⣐⣵⣿⣿⣌⠆⡑⢌⠢⡑⡐⢌⢌⠢⠡⣳⡀⠠⠀⠹⣿⡅⠀⠅⡷⢐⠠⢉⠓⣮⢐⢱⡟⡑⡇
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡟⡸⢟⠫⡘⢌⣢⣷⣿⣿⣿⣿⣿⣗⠌⡌⡢⢑⢐⢅⢑⠄⢕⠑⢌⢳⣤⡀⢘⣿⣷⠈⣠⠯⢐⠨⠠⢡⡗⡰⢸⡇⢌⡇
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣏⣴⢋⣢⣱⣼⣿⣿⣿⣿⠟⢿⣿⣿⣿⡐⣶⡈⡢⠡⡂⠆⢕⠡⡡⡑⡐⡹⢿⣷⣿⣿⣦⠏⠨⢐⠨⢈⣼⠡⡂⢽⣦⠟
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣿⣿⣧⣾⣿⢿⣿⣿⣿⠏⠁⠀⠈⠹⣿⣿⣷⣹⣷⡌⢌⠢⡑⢅⠪⡐⢌⠢⠊⠔⣹⡿⠫⠡⠨⠨⢐⠨⣰⠏⡂⡪⣽⣿⢧⡀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢴⣻⣿⣿⣾⣿⣿⡏⠀⣿⡿⠁⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣯⡢⢑⠌⡢⢡⣾⣚⣚⢛⢋⢃⢐⡁⣅⣡⣡⣶⠞⡍⢌⠢⣺⣟⡵⡼⠁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡿⢍⡴⢾⣝⢻⣿⡿⠁⣤⠟⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣷⣔⡵⠶⣟⣍⡋⡫⠻⡻⠿⡿⢿⠿⡿⢛⠅⡑⢌⠢⣱⣿⣯⠞
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠣⢟⡱⠋⠀⠀⡈⣹⡯⠠⡐⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⡙⠷⢶⢥⠿⡐⢅⠪⠨⡂⢕⣈⣆⣵⣼⠾⡃⣪⣿⣿⠁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡞⠠⣱⠞⠀⠀⠂⠁⠀⡇⠀⠀⠈⠙⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢻⣿⣿⣿⣝⠳⣴⣡⡙⡚⠶⠿⡿⡿⡿⠟⢟⣋⣦⣵⣴⣿⣿⢿⡀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣨⣿⠀⡈⠄⠠⠀⡞⠁⢀⠛⠓⠳⠢⢬⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣟⣼⣿⣶⣾⣵⣬⣨⣢⣵⣶⣾⣿⣿⣿⣿⢿⣿⣿⣿⣽
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⡌⣧⣄⠠⠁⡐⢨⠆⠉⠀⠀⠂⠖⣎⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣟⠹⣮⣷⢈⢮⣜⠩⡛⢿⣿⣿⢿⠿⡛⢍⢂⢪⣿⣯⠛⢿⢦⣀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢮⣿⣷⣶⠔⠋⠦⠀⢄⢄⠆⢒⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣧⣿⣿⢃⠢⣾⢷⡨⢂⠪⡐⠔⢌⠢⡑⠌⠔⣽⣿⣧⣵⠾⠛⢧⡀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣁⣀⠤⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⢿⡙⢻⣿⣧⠊⢿⣷⡙⣧⡑⢌⢌⠢⡑⠌⣪⣼⢞⣿⡿⢊⠅⡵⣤⣙⠦⡀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⡛⣿⣮⣿⣿⣏⠌⢍⢑⠌⡻⢷⡤⣑⣼⡾⢟⣿⠟⡩⢿⡶⠒⠶⣄⠪⢓⡽
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⠣⡙⢶⣿⣿⣿⣟⠻⠳⢦⣵⣬⣶⣷⣿⣯⣵⠟⡅⢕⢐⣿⠇⠂⠄⡽⢶⡉⡿
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⠏⢌⠢⢡⠨⡙⠿⣿⣧⡑⢅⠢⢡⠩⡻⢟⢋⠢⡑⢌⠢⡂⣿⠄⠂⠀⣻⡾⠞⠁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣇⣕⠨⠢⡑⢌⠢⣹⣿⣷⡔⡡⡑⢌⢌⠢⡊⢌⠢⡑⢌⣴⣿⠆⠀⣠⠋
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢻⣿⣿⣿⣿⣷⣬⣴⣿⣿⣿⣿⣿⡔⡨⢂⠢⡑⢌⠢⡑⣬⣾⣿⣿⡅⢠⠃
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡌⡢⢑⠌⡢⢡⣾⣿⢏⣿⣿⣥⠃
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⢇⢊⠧⣌⠪⡙⢛⠻⡿⣿⣿⣿⣿⡄⢕⢨⣴⣿⣿⡏⣾⢱⣿⣅
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣿⠟⡐⢔⠡⡩⠻⢿⣶⣥⡝⣎⠦⡉⡻⢿⣶⡿⣃⣾⢏⣾⣯⣾⣿⡗
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⣾⣿⣬⣂⠳⣦⣵⣅⣊⠝⠿⣞⢦⡝⣐⣿⣿⣵⣿⣯⣾⣿⢿⣿⣿⠅
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠿⡻⠻⢷⣬⠿⠿⠿⢿⣷⣷⣿⣷⣾⣿⣿⣿⣿⣿⡿⠿⢿⣿⡏
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⠣⡑⠌⡌⡢⢂⠕⡡⠡⣳⡾⠋⠁⢘⣿⣿⣿⣿⡟⡃⡪⠨⣿⡿⠁
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⡟⡨⢂⠕⡰⢈⠢⡑⠌⣺⡟⠀⠀⠀⣼⣿⣿⣿⡿⡐⢅⢊⢼⣿⡇
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢄⣀⣄⣄⣠⣴⣠⣀
+ ⠀Persistent Python and Bun cells inside Pi, with tool calls from code.⠀⠀⠀⢠⢠⣲⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣁⡀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢔⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣥⣀
+ ⠀pi install git:github.com/josemartinrodriguezmortaloni/pi-codesansbox⠀⠀⣸⣾⣿⣿⣿⣿⣿⢿⣿⡿⣿⣿⣿⣿⣿⣿⣯⠆
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⢿⠇⠟⠅⠛⠓⠳⡻⣟⢿⣿⣿⠓⠁
+ ⠀⚠ Status: 0.1.0. Built and tested on Pi 0.99.2 and Bun 1.3.13.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⢿⣿⣯⡇⠀⠀⡘⠄⠀⢀⣷⣿⠻⠹
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⡙⠗⣄⡜⠄⡒⠊⡜⠟⠁
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⠅⣰⠅⡑⠆⠄⡊⠆⠠⠱⠠⣀⡀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠔⣺⢾⣞⠞⡞⣛⣟⡁⠀⠈⠢⠠⠀⠘⠀⡅⠀⢈⣴⠊
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣧⣢⡚⢹⡌⡂⡊⡒⠪⠹⣟⠂⣈⣈⠀⠂⠜⡨⢟⠟⠿⢷⣄⣀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠝⠻⣙⢕⢑⢽⣂⢪⢂⡡⡃⡊⢷⡀⠈⢧⠞⣫⠀⢱⢪⠸⠰⠡⠩⣻⣆
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⣿⢚⠴⠡⡊⣺⡖⢑⢔⢔⢔⡠⢁⢧⡀⠀⢻⣷⠀⠸⣹⢌⡪⡊⡪⣸⢷
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡜⣽⠵⡹⢰⣱⣼⣾⣷⡡⢔⢑⡠⢪⠨⢒⢥⡐⠈⣿⡂⠂⠇⡰⠉⣖⡈⡎⢹
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣟⡜⣪⣌⣾⣿⣿⠿⣿⣿⡢⣅⡊⢢⠈⠜⡢⣁⠽⢶⣽⣧⠞⠁⡸⢠⡣⡐⣇⠏
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣾⣿⣾⡿⢻⣿⠟⠀⠀⠘⢿⣷⣽⡮⠨⡨⡊⣢⣊⣌⢮⢛⠅⠚⢂⣸⠞⠄⣺⣟⠦
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡞⡪⢽⣻⣿⠃⡼⠃⠀⠀⠀⠀⠘⣿⣿⣿⣥⡢⢴⣛⣺⠺⠶⡾⠾⠿⡻⠡⡊⣪⣿⡺⠁
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠪⣪⠊⡀⠠⡸⠃⠨⢆⠀⠀⠀⠀⠀⠀⠘⢿⣿⣿⢭⡓⡳⢣⣢⣡⣆⣥⣥⣖⢟⣨⣾⡇
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⣺⡁⡂⠠⢠⠂⡰⠢⠢⢱⠂⠀⠀⠀⠀⠀⠀⣿⣿⣽⣮⣽⣎⣲⣹⣥⣷⣾⣾⢿⣿⣿⡇
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⡱⣤⣂⣠⠃⠀⠀⣘⡪⠀⠀⠀⠀⠀⠀⠀⣾⣥⣳⣇⡺⣌⠍⣻⢻⠛⠍⡊⢜⣿⡍⣓⣦⡀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠸⣈⡨⠔⠀⠀⠀⠀⠀⠀⠀⢰⣿⢟⢻⣷⡘⣷⡝⣔⢔⡡⡃⢪⣲⢽⡿⡱⠢⣑⠆⡀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⢝⣷⣿⣧⣲⡡⡊⣳⣢⡾⣻⠽⠩⣻⣊⠑⢎⡣⡇
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡿⢚⠘⡹⠻⣷⣖⢍⠙⡹⠿⣛⢕⢑⢅⢽⠠⠀⣧⠗⠁
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⣿⣿⣬⣪⠨⢪⣼⣿⣮⠨⡨⡨⡂⡪⠨⣲⣿⠂⠔⠁
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⢿⣿⣿⣿⣿⣿⣿⣥⠊⡂⡪⣨⣾⣻⣿⡲⠁
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⣨⠲⢕⣍⡙⣟⡟⢿⣧⣡⡖⣿⢇⣇⣿⡆
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢽⣦⣂⢮⣪⣩⡛⢮⢎⢎⣾⣟⣾⣯⣿⢿⣿⠂
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⡫⠹⣓⢟⠻⣛⣿⠟⣷⣿⣿⣿⢟⠻⣿⠇
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡚⡸⡠⠢⡡⢢⡞⠁⠀⣾⣿⣿⠅⡪⣸⣿
 ```
 
 pi-eval-kernels is a [Pi](https://github.com/earendil-works/pi) extension that registers the `eval` tool. The model writes a cell of Python or JavaScript; the extension runs it in a persistent kernel and returns the output, the trailing value and the figures. Code inside a cell calls the agent's own tools, `tool.read`, `tool.write`, `tool.bash` or any MCP tool, over a loopback bridge that Pi checks like any other tool call.
@@ -102,13 +88,13 @@ Each call is one cell:
 eval({ language: "py" | "js", code: string, title?: string, timeout?: number, reset?: boolean })
 ```
 
-| Parameter  | Meaning                                                                                       |
-| ---------- | --------------------------------------------------------------------------------------------- |
-| `language` | `"py"` runs in the Python kernel, `"js"` in the Bun kernel                                    |
-| `code`     | The cell. A trailing expression is shown: `repr()` in Python, `util.inspect()` in JavaScript   |
-| `title`    | A short label in the TUI                                                                      |
-| `timeout`  | Seconds before the cell is interrupted. `120` by default; `0` turns it off                    |
-| `reset`    | Restart this language's kernel first, without its state                                       |
+| Parameter  | Meaning                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------- |
+| `language` | `"py"` runs in the Python kernel, `"js"` in the Bun kernel                                   |
+| `code`     | The cell. A trailing expression is shown: `repr()` in Python, `util.inspect()` in JavaScript |
+| `title`    | A short label in the TUI                                                                     |
+| `timeout`  | Seconds before the cell is interrupted. `120` by default; `0` turns it off                   |
+| `reset`    | Restart this language's kernel first, without its state                                      |
 
 The reference demo, as two cells:
 
@@ -126,9 +112,15 @@ totals
 ```javascript
 // eval language="js"
 const totals = JSON.parse(await tool.read({ path: "totals.json" }));
-const bars = Object.entries(totals).map(([month, value], i) =>
-  `<rect x="${40 + i * 90}" y="${230 - value / 2}" width="60" height="${value / 2}" fill="#4c78a8"/>`).join("");
-await display.svg(`<svg xmlns="http://www.w3.org/2000/svg" width="320" height="260">${bars}</svg>`);
+const bars = Object.entries(totals)
+  .map(
+    ([month, value], i) =>
+      `<rect x="${40 + i * 90}" y="${230 - value / 2}" width="60" height="${value / 2}" fill="#4c78a8"/>`,
+  )
+  .join("");
+await display.svg(
+  `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="260">${bars}</svg>`,
+);
 ```
 
 In the TUI, a cell reads like a notebook cell: the code, then stdout, warnings, the trailing value, and the figure drawn inline:
@@ -150,14 +142,14 @@ plotted 2 axes
 
 The extension has no settings file. It reads these sources:
 
-| Source                                   | Use                                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `PI_EVAL_PYTHON`                         | Python interpreter of the Python kernel. Without it, `python3` on the `PATH`                 |
-| `PI_EVAL_BUN`                            | Bun executable of the JavaScript kernel. Without it, `bun` on the `PATH`                     |
-| `PYTHONPATH`                             | Kept; the extension puts its own `python/` directory first                                   |
-| `MPLBACKEND`                             | Replaced with the inline backend in the Python kernel, so `plt.show()` returns the figure    |
-| Pi `showImages` setting                  | Whether the TUI draws the figures. The model receives them either way                        |
-| `$TMPDIR/pi-eval-*/output.txt`           | Output, not input: the full text of a cell whose output was truncated                        |
+| Source                         | Use                                                                                       |
+| ------------------------------ | ----------------------------------------------------------------------------------------- |
+| `PI_EVAL_PYTHON`               | Python interpreter of the Python kernel. Without it, `python3` on the `PATH`              |
+| `PI_EVAL_BUN`                  | Bun executable of the JavaScript kernel. Without it, `bun` on the `PATH`                  |
+| `PYTHONPATH`                   | Kept; the extension puts its own `python/` directory first                                |
+| `MPLBACKEND`                   | Replaced with the inline backend in the Python kernel, so `plt.show()` returns the figure |
+| Pi `showImages` setting        | Whether the TUI draws the figures. The model receives them either way                     |
+| `$TMPDIR/pi-eval-*/output.txt` | Output, not input: the full text of a cell whose output was truncated                     |
 
 ## How it works
 
@@ -220,14 +212,14 @@ sequenceDiagram
 
 ### Kernels
 
-| | Python | JavaScript |
-| --- | --- | --- |
-| Process | `python3 -u python/runner.py`, no IPython | `bun src/js/worker.ts` |
-| State | One namespace for the session; top-level `await` works | `vm.runInThisContext`; top-level `const`, `let` and `class` become `var` so a cell can declare a name again |
-| Call a tool | `tool.read(path="x")`, `tool["name"]({...})`, synchronous | `await tool.read({ path: "x" })` |
-| List tools | `list_tools()` | `await listTools()` |
-| A failed call | raises `ToolError` | rejects with `ToolError` |
-| Images | `plt.show()`, a trailing figure, figures still open at the end, `display(obj)`, `display_png(bytes)` | `await display.svg(svg)`, `display.png(bytes)`, `display(value)` |
+|               | Python                                                                                               | JavaScript                                                                                                  |
+| ------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Process       | `python3 -u python/runner.py`, no IPython                                                            | `bun src/js/worker.ts`                                                                                      |
+| State         | One namespace for the session; top-level `await` works                                               | `vm.runInThisContext`; top-level `const`, `let` and `class` become `var` so a cell can declare a name again |
+| Call a tool   | `tool.read(path="x")`, `tool["name"]({...})`, synchronous                                            | `await tool.read({ path: "x" })`                                                                            |
+| List tools    | `list_tools()`                                                                                       | `await listTools()`                                                                                         |
+| A failed call | raises `ToolError`                                                                                   | rejects with `ToolError`                                                                                    |
+| Images        | `plt.show()`, a trailing figure, figures still open at the end, `display(obj)`, `display_png(bytes)` | `await display.svg(svg)`, `display.png(bytes)`, `display(value)`                                            |
 
 `eval` has the `model-only` exposure: a cell can call every tool the session exposes to tools, but never `eval`, so a cell cannot start another cell.
 
@@ -249,11 +241,11 @@ flowchart TD
 
 ### Cleanup
 
-| Event | What stops the kernels |
-| --- | --- |
+| Event                                          | What stops the kernels                                                  |
+| ---------------------------------------------- | ----------------------------------------------------------------------- |
 | `session_shutdown` (quit, new session, reload) | An `exit` message, then `SIGTERM`, then `SIGKILL` to each process group |
-| Pi exits without a shutdown | An `exit` hook sends `SIGKILL` to the process groups |
-| Pi is killed with `SIGKILL` | Each kernel sees its parent change and exits within a second |
+| Pi exits without a shutdown                    | An `exit` hook sends `SIGKILL` to the process groups                    |
+| Pi is killed with `SIGKILL`                    | Each kernel sees its parent change and exits within a second            |
 
 Child processes that cell code starts belong to the kernel's process group, so they stop with it.
 
@@ -269,21 +261,21 @@ Child processes that cell code starts belong to the kernel's process group, so t
 
 Each module owns one reason to change. `index.ts` only registers the tool and wires `session_shutdown`.
 
-| Module                 | Owns                                                                 | Changes when                              |
-| ---------------------- | -------------------------------------------------------------------- | ----------------------------------------- |
-| `index.ts`             | Tool registration and the session's runtime lifetime                 | Pi's extension lifecycle changes          |
-| `eval-tool.ts`         | Schema, model-facing description, result assembly, partial updates  | The tool contract changes                 |
-| `runtime.ts`           | One bridge and one slot per language for a session                   | A language is added                       |
-| `bridge.ts`            | Loopback HTTP, token check, dispatch to `ctx.executeTool`            | Pi's nested-call contract changes         |
-| `cell-output.ts`       | Frames → text and image blocks, truncation, status notes             | What the model receives changes           |
-| `render.ts`            | `renderCall` and `renderResult` in the TUI                           | The transcript design changes             |
-| `kernel/kernel.ts`     | One kernel process, its frames, process-group signals                | The frame protocol changes                |
-| `kernel/transports.ts` | How each kernel is spawned and talked to                             | A runtime's spawn or channel changes      |
-| `kernel/slot.ts`       | Lazy start, deadlines, interrupt escalation, restart                 | The interrupt policy changes              |
-| `js/worker.ts`         | The Bun kernel: execution, console capture, `tool`, `display`        | The JavaScript cell semantics change      |
-| `js/rewrite.ts`        | Top-level bindings, imports and the trailing value of a cell         | The REPL rewrite rules change             |
-| `python/runner.py`     | The Python kernel: execution, streams, display, `tool`               | The Python cell semantics change          |
-| `python/pi_inline_backend.py` | `plt.show()` → figure frames                                  | matplotlib's backend API changes          |
+| Module                        | Owns                                                               | Changes when                         |
+| ----------------------------- | ------------------------------------------------------------------ | ------------------------------------ |
+| `index.ts`                    | Tool registration and the session's runtime lifetime               | Pi's extension lifecycle changes     |
+| `eval-tool.ts`                | Schema, model-facing description, result assembly, partial updates | The tool contract changes            |
+| `runtime.ts`                  | One bridge and one slot per language for a session                 | A language is added                  |
+| `bridge.ts`                   | Loopback HTTP, token check, dispatch to `ctx.executeTool`          | Pi's nested-call contract changes    |
+| `cell-output.ts`              | Frames → text and image blocks, truncation, status notes           | What the model receives changes      |
+| `render.ts`                   | `renderCall` and `renderResult` in the TUI                         | The transcript design changes        |
+| `kernel/kernel.ts`            | One kernel process, its frames, process-group signals              | The frame protocol changes           |
+| `kernel/transports.ts`        | How each kernel is spawned and talked to                           | A runtime's spawn or channel changes |
+| `kernel/slot.ts`              | Lazy start, deadlines, interrupt escalation, restart               | The interrupt policy changes         |
+| `js/worker.ts`                | The Bun kernel: execution, console capture, `tool`, `display`      | The JavaScript cell semantics change |
+| `js/rewrite.ts`               | Top-level bindings, imports and the trailing value of a cell       | The REPL rewrite rules change        |
+| `python/runner.py`            | The Python kernel: execution, streams, display, `tool`             | The Python cell semantics change     |
+| `python/pi_inline_backend.py` | `plt.show()` → figure frames                                       | matplotlib's backend API changes     |
 
 ```mermaid
 classDiagram
@@ -354,15 +346,15 @@ pi -e "$PWD"   # load the working tree in Pi
 
 Gate every change before a commit:
 
-| Command              | Checks                                                                                        |
-| -------------------- | --------------------------------------------------------------------------------------------- |
-| `bun run typecheck`  | `tsc --noEmit`, strict                                                                         |
+| Command              | Checks                                                                                             |
+| -------------------- | -------------------------------------------------------------------------------------------------- |
+| `bun run typecheck`  | `tsc --noEmit`, strict                                                                             |
 | `bun run complexity` | `lizard -C 3` over `src`, `python` and `test`: cyclomatic complexity < 4 per function. Needs `uvx` |
-| `bun run test`       | `node:test` against real Pi sessions with a scripted faux model, and one run of the `pi` CLI    |
-| `bun run check`      | All three, in that order                                                                       |
+| `bun run test`       | `node:test` against real Pi sessions with a scripted faux model, and one run of the `pi` CLI       |
+| `bun run check`      | All three, in that order                                                                           |
 
 The tests load this package from disk, the same way `pi -e` does. The CLI test runs `pi --mode json` with its own `PI_CODING_AGENT_DIR`, so it never reads your settings. Set `PI_BIN` to test another `pi` binary.
 
 ## Credits
 
-Built on [Pi](https://github.com/earendil-works/pi) by Earendil. The design of the kernels and the bridge comes from the `eval` tool of [oh-my-pi](https://github.com/can1357/oh-my-pi) by Can Bölük, under the MIT license; see [`NOTICE`](NOTICE). Cells are parsed with [acorn](https://github.com/acornjs/acorn), and SVG charts are rendered with [resvg-js](https://github.com/thx/resvg-js). The banner is a braille rendering of Spike Spiegel from *Cowboy Bebop* (© Sunrise), made from the character art in IGN's [The Many Inspirations of Cowboy Bebop Director Shinichiro Watanabe](https://sea.ign.com/cowboy-bebop-2/125472/the-many-inspirations-of-cowboy-bebop-director-shinichiro-watanabe).
+Built on [Pi](https://github.com/earendil-works/pi) by Earendil. The design of the kernels and the bridge comes from the `eval` tool of [oh-my-pi](https://github.com/can1357/oh-my-pi) by Can Bölük, under the MIT license; see [`NOTICE`](NOTICE). Cells are parsed with [acorn](https://github.com/acornjs/acorn), and SVG charts are rendered with [resvg-js](https://github.com/thx/resvg-js). The banner is a braille rendering of Spike Spiegel from _Cowboy Bebop_ (© Sunrise), made from the character art in IGN's [The Many Inspirations of Cowboy Bebop Director Shinichiro Watanabe](https://sea.ign.com/cowboy-bebop-2/125472/the-many-inspirations-of-cowboy-bebop-director-shinichiro-watanabe).
