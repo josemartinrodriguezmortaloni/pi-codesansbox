@@ -1,11 +1,103 @@
-# pi-eval-kernels
+```text
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄⡀⠀⠀
+ Persistent Python and Bun cells inside Pi, with tool calls from code.⠀⠀⠀⠀⠀⠀⣴⠋⠀⣠⣄⠀⠀⣠⣄⠀⠀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⡄⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠘⢿⡿⠃⠘⢧⡼⠃⠘⢧⡼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀
+ bun install && pi install "$PWD"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⡇⠀
+ ⚠ Status: 0.1.0. Built and tested on Pi 0.99.2 and Bun 1.3.13.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⢀⠀⠀⡀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⣱⠀⢈⡆⠀⣱⠀⠀⠰⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠀⠀⠶⠶⠶⠶⠶⠶⠶⠀⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠈⠁⠀⠉⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠀⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠋⠀⠀⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡞⣥⠤⠤⢤⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣧⣀⡀⠀⠀⠀⣠⠏⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠟⠀⠀⠈⠙⠳⢶⣾⡇⠀⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⢀⡼⢣⡤⠤⠤⡄⠀⠀⠈⠉⠀⠀⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⣠⠿⠿⠶⢤⣄⣀⣀⣠⠏⠀⢸⡇⠀⠀⡇⠀⢀⣀⣀⣀⡀⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⢀⡴⠞⠁⠀⠀⠀⠀⠈⠉⠿⠟⠀⠀⢸⡇⠀⠀⡇⠀⢸⠁⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⢸⣿⠏⠀⠀⣶⠒⠒⢲⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⢸⠀⠀⡶⠒⠒⣶⠀⢸⡇⠀⠀⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⢠⡤⠤⢤⡄⠀⣿⠀⠀⢸⠀⠀⡇⠀⠀⣿⠀⢸⡇⠀⠀⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⡇⠀⠀⣿⠀⢸⡇⠀⠀⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⡇⠀⠀⣿⠀⢸⡇⠀⠀⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⡇⠀⠀⣿⠀⢸⡇⠀⠀⡇⠀⢸⠀⠀⢸⡇⠀⣿⠀⠀⢸⠀⠀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⣇⣀⣸⣀⣀⣸⣇⣀⣿⣀⣀⣸⣀⣀⣇⣀⣀⣿⣀⣸⣇⣀⣀⣇⣀⣸⣀⣀⣸⣇⣀⣿⣀⣀⣸⣀⣀⠀⠀⠀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⢀⡇⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡾⠁⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀
+```
 
-A [Pi](https://github.com/earendil-works/pi) extension that adds an `eval` tool: notebook-style cells that run in a persistent Python kernel or a persistent Bun (JavaScript) kernel. Code in either kernel can call the agent's own tools (`read`, `write`, `bash`, MCP tools, and so on) over an authenticated loopback bridge.
+pi-eval-kernels is a [Pi](https://github.com/earendil-works/pi) extension that registers the `eval` tool. The model writes a cell of Python or JavaScript; the extension runs it in a persistent kernel and returns the output, the trailing value and the figures. Code inside a cell calls the agent's own tools, `tool.read`, `tool.write`, `tool.bash` or any MCP tool, over a loopback bridge that Pi checks like any other tool call.
 
-It reproduces the `eval` tool of [oh-my-pi](https://github.com/can1357/oh-my-pi) on Pi 0.99.2.
+It brings the `eval` tool of [oh-my-pi](https://github.com/can1357/oh-my-pi) to Pi. The model loads a CSV with `tool.read` from Python, charts it from JavaScript, and the chart comes back as an image without leaving the cell.
+
+## Highlights
+
+- **Notebook state:** variables, functions and imports persist between cells; each session has one Python kernel and one Bun kernel
+- **Your tools from code:** `tool.read(path=...)` in Python, `await tool.read({ path })` in JavaScript; every tool the session can call, found at run time, not from a fixed list
+- **Pi still decides:** nested calls run through `ctx.executeTool`, so argument validation, `tool_call` hooks and permission extensions see them
+- **Figures inline:** matplotlib figures and SVG charts come back as PNG images, to the model and to the TUI
+- **Interrupts that keep state:** a timeout or `Esc` sends `SIGINT`; the cell stops and the kernel keeps its variables
+- **No orphans:** kernels live in their own process groups and stop with the session, with Pi, or when Pi is killed
+- **Loopback only:** the bridge listens on `127.0.0.1` and checks a per-session token that never enters the environment
+
+<p>
+  <a href="https://github.com/earendil-works/pi"><img alt="Pi 0.99.2" src="https://img.shields.io/badge/PI-0.99.2-0a0a0a.svg?style=for-the-badge&amp;labelColor=000000" height="28"></a>
+  <a href="https://www.python.org"><img alt="Python 3" src="https://img.shields.io/badge/PYTHON-3-0a0a0a.svg?style=for-the-badge&amp;logo=python&amp;labelColor=000000" height="28"></a>
+  <a href="https://bun.sh"><img alt="Bun 1.3" src="https://img.shields.io/badge/BUN-1.3-0a0a0a.svg?style=for-the-badge&amp;logo=bun&amp;labelColor=000000" height="28"></a>
+  <a href="https://www.typescriptlang.org"><img alt="TypeScript" src="https://img.shields.io/badge/TYPESCRIPT-STRICT-0a0a0a.svg?style=for-the-badge&amp;logo=typescript&amp;labelColor=000000" height="28"></a>
+</p>
+
+## Install
+
+You need:
+
+- **Pi 0.99.2** (`pi --version`).
+- **Python 3** on the `PATH` as `python3`. No Jupyter and no ipykernel. matplotlib only if you want figures.
+- **Bun** on the `PATH`. The JavaScript kernel runs on Bun; the extension itself runs inside Pi on Node.
+
+Install from a clone:
+
+```bash
+git clone <repository-url> pi-codesanbox-execution
+cd pi-codesanbox-execution
+bun install
+pi install "$PWD"
+```
+
+`bun install` adds the two runtime dependencies, `acorn` and `@resvg/resvg-js`. `pi install` adds the package to `~/.pi/agent/settings.json`; add `-l` to install it for the current project only. To try it for one run without changing settings:
+
+```bash
+pi -e "$PWD"
+```
+
+## Get started
+
+Ask for something that needs code. The model calls `eval` on its own:
+
+```text
+Load sales.csv, add up the revenue per month, and chart it.
+```
+
+Each call is one cell:
+
+```ts
+eval({ language: "py" | "js", code: string, title?: string, timeout?: number, reset?: boolean })
+```
+
+| Parameter  | Meaning                                                                                       |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| `language` | `"py"` runs in the Python kernel, `"js"` in the Bun kernel                                    |
+| `code`     | The cell. A trailing expression is shown: `repr()` in Python, `util.inspect()` in JavaScript   |
+| `title`    | A short label in the TUI                                                                      |
+| `timeout`  | Seconds before the cell is interrupted. `120` by default; `0` turns it off                    |
+| `reset`    | Restart this language's kernel first, without its state                                       |
+
+The reference demo, as two cells:
 
 ```python
-# eval language="py": load a CSV through the agent's read tool
+# eval language="py"
 import csv, io, json
 rows = list(csv.DictReader(io.StringIO(tool.read(path="sales.csv"))))
 totals = {}
@@ -16,185 +108,245 @@ totals
 ```
 
 ```javascript
-// eval language="js": chart the result; the PNG reaches the model and the TUI
+// eval language="js"
 const totals = JSON.parse(await tool.read({ path: "totals.json" }));
 const bars = Object.entries(totals).map(([month, value], i) =>
   `<rect x="${40 + i * 90}" y="${230 - value / 2}" width="60" height="${value / 2}" fill="#4c78a8"/>`).join("");
 await display.svg(`<svg xmlns="http://www.w3.org/2000/svg" width="320" height="260">${bars}</svg>`);
 ```
 
-## Requirements
+In the TUI, a cell reads like a notebook cell: the code, then stdout, warnings, the trailing value, and the figure drawn inline:
 
-| Component | Version | Notes |
-|---|---|---|
-| Pi | 0.99.2 or later | Runs the extension on Node.js. |
-| Python | 3.x on `PATH` as `python3` | Override with `PI_EVAL_PYTHON`. No Jupyter or ipykernel needed. matplotlib is optional and only needed for figures. |
-| Bun | on `PATH` as `bun` | Override with `PI_EVAL_BUN`. |
+```text
+eval py
+fig, (left, right) = plt.subplots(1, 2, figsize=(12, 7))
+…
+plt.show()
+fig
 
-## Install
-
-1. Install the runtime dependencies (`acorn`, `@resvg/resvg-js`):
-
-   ```sh
-   cd /path/to/pi-codesanbox-execution
-   bun install
-   ```
-
-2. Try the extension for one run, without changing your settings:
-
-   ```sh
-   pi -e /path/to/pi-codesanbox-execution
-   ```
-
-3. Activate it permanently. This adds the package to `~/.pi/agent/settings.json`:
-
-   ```sh
-   pi install /path/to/pi-codesanbox-execution
-   ```
-
-   `pi list` then shows the package. Add `-l` to install it only for the current project.
-
-## The `eval` tool
-
-```ts
-eval({ language: "py" | "js", code: string, title?: string, timeout?: number, reset?: boolean })
+plotted 2 axes
+<cell-3>:5: UserWarning: The figure layout has changed to tight
+<Figure size 1200x700 with 2 Axes>
+[the chart, inline]
 ```
-
-| Parameter | Meaning |
-|---|---|
-| `language` | `"py"` runs in the Python kernel, `"js"` in the Bun kernel. |
-| `code` | Cell source. The value of a trailing expression is displayed: `repr()` in Python, `util.inspect()` in JavaScript. |
-| `title` | Short label shown in the TUI. |
-| `timeout` | Seconds before the cell is interrupted. Default `120`; `0` disables it. |
-| `reset` | Restart this language's kernel before running, discarding its state. |
-
-### State
-
-Each session has one kernel per language. Variables, functions, classes, and imports defined in a cell stay available in later cells of the same language. The two kernels do not share memory; pass data through files or tool calls.
-
-In JavaScript, top-level `const`, `let`, and `class` declarations are rewritten to `var`, so a later cell can declare the same name again, like a REPL. Top-level `await` and static `import` statements work. Relative and bare specifiers resolve from the session's working directory.
-
-### Calling the agent's tools
-
-| | Python | JavaScript |
-|---|---|---|
-| Call a tool | `tool.read(path="x")` or `tool["name"]({...})` (synchronous) | `await tool.read({ path: "x" })` |
-| List callable tools | `list_tools()` | `await listTools()` |
-| Failed, blocked, or invalid call | raises `ToolError` | rejects with `ToolError` |
-
-Tools are discovered at call time, not from a fixed list. Every tool Pi lets one tool call from another (`ctx.tools`) is reachable: active built-in tools, tools from other extensions, and `codemode`/`deferred` tools such as MCP tools. `eval` itself is not reachable, so a cell cannot start another cell.
-
-A tool returns its `structuredContent` when it declares an `outputSchema`, and its text otherwise. This is the same rule Pi's `codemode` uses. Images in a nested result, for example `tool.read` of a PNG, become images of the cell.
-
-Nested calls go through `ctx.executeTool()`. Pi's argument validation, `tool_call`/`tool_result` hooks, and permission extensions apply to them exactly as to calls the model makes.
-
-### Output and images
-
-Each cell returns one text block followed by one image block per image:
-
-- The text block holds stdout, stderr (including Python warnings and tracebacks), and displayed values in the order they were produced.
-- Long text is truncated to the tail, and the full output is written to a temporary file whose path the result names.
-
-| | Python | JavaScript |
-|---|---|---|
-| Figures | `plt.show()`, a trailing figure expression, and every figure still open when the cell ends | `await display.svg(svgString, { width? })` rasterizes SVG to PNG |
-| Raw PNG | `display_png(bytes_or_base64)` | `display.png(bytesOrBase64)` |
-| Any value | `display(obj)` (uses `_repr_png_` when present) | `display(value)` |
-
-The images reach the model as image content. In the interactive TUI, Pi draws them inline under the cell when the terminal supports images (kitty or iTerm protocol) and image display is enabled in the settings.
-
-### Timeouts and interrupts
-
-When a cell exceeds its timeout, or the run is aborted (for example with Esc), the kernel receives `SIGINT`:
-
-- Python raises `KeyboardInterrupt` in the cell. The kernel keeps its state.
-- JavaScript stops synchronous code with `vm` `breakOnSigint`. A cell waiting on a promise is abandoned. The kernel keeps its state.
-- If the kernel does not answer within 3 seconds, it is killed and restarted. The result then says that variables from earlier cells are gone. In JavaScript this happens for a busy loop that starts after an `await`.
-
-## How it works
-
-```mermaid
-flowchart LR
-  model[Model] -->|eval call| tool[eval tool]
-  tool -->|NDJSON on stdin/stdout| py[Python runner]
-  tool -->|Node IPC| js[Bun worker]
-  py -->|HTTP + bearer token| bridge[Loopback bridge 127.0.0.1]
-  js -->|HTTP + bearer token| bridge
-  bridge -->|ctx.executeTool| tools[Pi tools]
-```
-
-1. The first cell of a language starts that kernel and the bridge. Nothing starts when the extension loads.
-2. The kernel receives the bridge URL and token as its first protocol message.
-3. While a cell runs, the bridge routes tool calls through that `eval` call's context. Outside a cell, it refuses calls with `409`.
-4. Kernels emit frames (`stream`, `display`, `done`); the extension turns them into the tool result and streams partial output to the TUI.
-5. On `session_shutdown`, both kernels get an exit message, then `SIGTERM`, then `SIGKILL` on their whole process group.
-
-Additional cleanup paths:
-
-- If Pi exits without a shutdown, an exit hook kills the kernel process groups.
-- If Pi is killed with `SIGKILL`, each kernel notices that its parent changed and exits within a second.
-
-## Security
-
-- The bridge listens only on `127.0.0.1`, on a random port.
-- Every request needs `Authorization: Bearer <token>`. The token is 256 random bits, generated per session, and compared in constant time.
-- The token reaches the kernels over stdin (Python) or IPC (Bun), not through environment variables. Other processes of the same user cannot read it from `/proc/<pid>/environ`.
-- Cell code runs with your user's permissions. There is no sandbox. Treat `eval` like `bash`.
 
 ## Configuration
 
-| Variable | Default | Effect |
-|---|---|---|
-| `PI_EVAL_PYTHON` | `python3` | Python interpreter for the Python kernel. |
-| `PI_EVAL_BUN` | `bun` | Bun executable for the JavaScript kernel. |
+The extension has no settings file. It reads these sources:
 
-## Differences from oh-my-pi
+| Source                                   | Use                                                                                         |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `PI_EVAL_PYTHON`                         | Python interpreter of the Python kernel. Without it, `python3` on the `PATH`                 |
+| `PI_EVAL_BUN`                            | Bun executable of the JavaScript kernel. Without it, `bun` on the `PATH`                     |
+| `PYTHONPATH`                             | Kept; the extension puts its own `python/` directory first                                   |
+| `MPLBACKEND`                             | Replaced with the inline backend in the Python kernel, so `plt.show()` returns the figure    |
+| Pi `showImages` setting                  | Whether the TUI draws the figures. The model receives them either way                        |
+| `$TMPDIR/pi-eval-*/output.txt`           | Output, not input: the full text of a cell whose output was truncated                        |
 
-- In Python, `tool.<name>()` is synchronous. oh-my-pi makes it awaitable.
-- Both kernels use the HTTP bridge. oh-my-pi routes JavaScript tool calls over IPC.
-- A JavaScript interrupt keeps the kernel state for synchronous code. oh-my-pi restarts the worker on every abort.
-- `display.svg()` is new. oh-my-pi has no chart helper for JavaScript.
-- Not included:
-  - the `agent`, `completion`, `judge`, `workpool`, and `budget` helpers;
-  - Python magics;
-  - TypeScript in JavaScript cells;
-  - concurrent cells in one kernel;
-  - pausing the cell timeout while a tool call is pending.
+## How it works
 
-`TASKS.md` maps each part of oh-my-pi's implementation to the Pi API that replaces it, with file and line references.
+The extension owns one bridge and two kernel slots per Pi session. Nothing starts when the extension loads: the first cell of a language starts that kernel and the bridge.
 
-## Project layout
+```mermaid
+flowchart LR
+    subgraph pi["Pi process (Node)"]
+        model["Model turn"]
+        tool["eval tool"]
+        bridge["Loopback bridge<br/>127.0.0.1"]
+        tools["Pi tools<br/>ctx.executeTool"]
+    end
+    subgraph pyk["python3 child"]
+        py["runner.py"]
+    end
+    subgraph jsk["bun child"]
+        js["worker.ts"]
+    end
 
-```text
-src/
-  index.ts          extension entry: registers eval, shuts kernels down
-  eval-tool.ts      tool schema, description, result assembly
-  runtime.ts        per-session bridge and kernel slots
-  bridge.ts         loopback HTTP bridge to ctx.executeTool
-  cell-output.ts    frames -> model content (text, images, truncation)
-  render.ts         TUI renderCall / renderResult
-  kernel/           process spawn, protocol, timeouts, restart
-  js/worker.ts      Bun kernel
-  js/rewrite.ts     top-level binding rewrite (acorn)
-python/
-  runner.py         Python kernel
-  pi_inline_backend.py  matplotlib backend for plt.show()
-test/               node:test suite with real Pi sessions
+    model -- "eval call" --> tool
+    tool -- "NDJSON over stdin/stdout" --> py
+    tool -- "Node IPC" --> js
+    py -- "HTTP + bearer token" --> bridge
+    js -- "HTTP + bearer token" --> bridge
+    bridge --> tools
 ```
+
+### A cell
+
+Both kernels speak the same frames: `ready`, `stream`, `display` and `done`. The extension turns them into one tool result and streams the partial output to the TUI while the cell runs.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Pi
+    participant Tool as eval tool
+    participant K as Kernel
+    participant B as Bridge
+    participant T as read tool
+
+    Pi->>Tool: execute(eval, {language, code})
+    Tool->>B: bind(ctx, signal)
+    Tool->>K: run {id, code}
+    K-->>Tool: stream (stdout)
+    K->>B: POST /v1/tools/call {name: "read", args}
+    B->>T: ctx.executeTool("read", args)
+    T-->>B: result
+    B-->>K: {ok, value, images}
+    K-->>Tool: display {text, png}
+    K-->>Tool: done {status}
+    Tool->>B: unbind
+    Tool-->>Pi: text block + image blocks
+```
+
+- The text block holds stdout, stderr, warnings, tracebacks and shown values, in the order the kernel wrote them.
+- Long text keeps its tail for the model; the full text goes to a file that the result names.
+- A nested tool returns its `structuredContent` when it declares an `outputSchema`, and its text otherwise: the same rule as Pi's `codemode`.
+- Images in a nested result, such as `tool.read` of a PNG, become images of the cell.
+
+### Kernels
+
+| | Python | JavaScript |
+| --- | --- | --- |
+| Process | `python3 -u python/runner.py`, no IPython | `bun src/js/worker.ts` |
+| State | One namespace for the session; top-level `await` works | `vm.runInThisContext`; top-level `const`, `let` and `class` become `var` so a cell can declare a name again |
+| Call a tool | `tool.read(path="x")`, `tool["name"]({...})`, synchronous | `await tool.read({ path: "x" })` |
+| List tools | `list_tools()` | `await listTools()` |
+| A failed call | raises `ToolError` | rejects with `ToolError` |
+| Images | `plt.show()`, a trailing figure, figures still open at the end, `display(obj)`, `display_png(bytes)` | `await display.svg(svg)`, `display.png(bytes)`, `display(value)` |
+
+`eval` has the `model-only` exposure: a cell can call every tool the session exposes to tools, but never `eval`, so a cell cannot start another cell.
+
+### Interrupts
+
+A timeout or an aborted run sends `SIGINT` to the kernel's process group:
+
+```mermaid
+flowchart TD
+    stop(["Timeout or Esc"]) --> sigint["SIGINT to the kernel"]
+    sigint --> answered{"done within 3 s?"}
+    answered -- yes --> kept["Cell interrupted<br/>kernel state kept"]
+    answered -- no --> killed["Kernel killed and restarted<br/>result says the state is gone"]
+```
+
+- Python raises `KeyboardInterrupt` inside the cell.
+- JavaScript stops synchronous code through `breakOnSigint`, and abandons a cell that waits on a promise.
+- A JavaScript busy loop that starts after an `await` ignores `SIGINT`, so that kernel restarts.
+
+### Cleanup
+
+| Event | What stops the kernels |
+| --- | --- |
+| `session_shutdown` (quit, new session, reload) | An `exit` message, then `SIGTERM`, then `SIGKILL` to each process group |
+| Pi exits without a shutdown | An `exit` hook sends `SIGKILL` to the process groups |
+| Pi is killed with `SIGKILL` | Each kernel sees its parent change and exits within a second |
+
+Child processes that cell code starts belong to the kernel's process group, so they stop with it.
+
+### Security
+
+- The bridge listens on `127.0.0.1`, on a random port.
+- Every request needs `Authorization: Bearer <token>`. The token is 256 random bits per session, compared in constant time.
+- The token reaches the kernel as its first protocol message, over stdin or IPC. Other processes of your user cannot read it in `/proc/<pid>/environ`.
+- Outside a running cell, the bridge answers `409` to every call.
+- Cell code runs with your permissions and without a sandbox: treat `eval` like `bash`.
+
+## Architecture
+
+Each module owns one reason to change. `index.ts` only registers the tool and wires `session_shutdown`.
+
+| Module                 | Owns                                                                 | Changes when                              |
+| ---------------------- | -------------------------------------------------------------------- | ----------------------------------------- |
+| `index.ts`             | Tool registration and the session's runtime lifetime                 | Pi's extension lifecycle changes          |
+| `eval-tool.ts`         | Schema, model-facing description, result assembly, partial updates  | The tool contract changes                 |
+| `runtime.ts`           | One bridge and one slot per language for a session                   | A language is added                       |
+| `bridge.ts`            | Loopback HTTP, token check, dispatch to `ctx.executeTool`            | Pi's nested-call contract changes         |
+| `cell-output.ts`       | Frames → text and image blocks, truncation, status notes             | What the model receives changes           |
+| `render.ts`            | `renderCall` and `renderResult` in the TUI                           | The transcript design changes             |
+| `kernel/kernel.ts`     | One kernel process, its frames, process-group signals                | The frame protocol changes                |
+| `kernel/transports.ts` | How each kernel is spawned and talked to                             | A runtime's spawn or channel changes      |
+| `kernel/slot.ts`       | Lazy start, deadlines, interrupt escalation, restart                 | The interrupt policy changes              |
+| `js/worker.ts`         | The Bun kernel: execution, console capture, `tool`, `display`        | The JavaScript cell semantics change      |
+| `js/rewrite.ts`        | Top-level bindings, imports and the trailing value of a cell         | The REPL rewrite rules change             |
+| `python/runner.py`     | The Python kernel: execution, streams, display, `tool`               | The Python cell semantics change          |
+| `python/pi_inline_backend.py` | `plt.show()` → figure frames                                  | matplotlib's backend API changes          |
+
+```mermaid
+classDiagram
+    direction LR
+
+    class EvalRuntime {
+        bridge: ToolBridge
+        run(cell) CellOutcome
+        dispose()
+    }
+    class ToolBridge {
+        token: string
+        start() url
+        bind(binding) unbind
+        close()
+    }
+    class KernelSlot {
+        language: Language
+        run(request) CellOutcome
+        reset()
+        dispose()
+    }
+    class Kernel {
+        ready: Promise
+        run(code, onOutput) DoneFrame
+        interrupt()
+        dispose()
+    }
+    class KernelTransport {
+        <<interface>>
+        child: ChildProcess
+        outputPipes
+        send(message)
+        onFrame(listener)
+    }
+    class CellOutput {
+        add(frame)
+        preview() string
+        content(outcome) ModelContent
+    }
+
+    EvalRuntime *-- ToolBridge
+    EvalRuntime *-- KernelSlot : py and js
+    KernelSlot o-- Kernel : current process
+    Kernel --> KernelTransport
+    ToolBridge ..> ExtensionToolContext : executeTool
+    CellOutput ..> Kernel : frames
+```
+
+## Limits
+
+- Under the `claude-acp` provider, Claude Code works with its own tools and never sees `eval`. The tool reaches models that Pi drives directly.
+- The two kernels share no memory. Pass data through files or tool calls.
+- One cell runs at a time: `eval` runs in sequence with other tools.
+- In Python, `tool.<name>()` blocks the cell. oh-my-pi makes it awaitable.
+- The cell timeout keeps counting while a nested tool call runs.
+- JavaScript cells are JavaScript, not TypeScript.
+- Not ported from oh-my-pi: the `agent`, `completion`, `judge`, `workpool` and `budget` helpers, and Python magics. Pi has no subsystems behind them.
+
+[`TASKS.md`](TASKS.md) maps each part of oh-my-pi's `eval` to the Pi API that replaces it, with file and line on both sides.
 
 ## Development
 
-```sh
+```bash
 bun install
-bun run check        # tsc + complexity gate + tests
-bun run test         # tests only
-bun run complexity   # uvx lizard -C 3 src python test
+pi -e "$PWD"   # load the working tree in Pi
 ```
 
-Most tests start real Pi sessions that load this package from disk, with a scripted faux model that issues `eval` calls. One test runs the installed `pi` CLI in JSON mode with an isolated `PI_CODING_AGENT_DIR`. Set `PI_BIN` to test another binary.
+Gate every change before a commit:
 
-The complexity gate fails any function with a cyclomatic complexity above 3. Running it needs `uvx` (uv).
+| Command              | Checks                                                                                        |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| `bun run typecheck`  | `tsc --noEmit`, strict                                                                         |
+| `bun run complexity` | `lizard -C 3` over `src`, `python` and `test`: cyclomatic complexity < 4 per function. Needs `uvx` |
+| `bun run test`       | `node:test` against real Pi sessions with a scripted faux model, and one run of the `pi` CLI    |
+| `bun run check`      | All three, in that order                                                                       |
 
-## License
+The tests load this package from disk, the same way `pi -e` does. The CLI test runs `pi --mode json` with its own `PI_CODING_AGENT_DIR`, so it never reads your settings. Set `PI_BIN` to test another `pi` binary.
 
-MIT. Parts of the design come from oh-my-pi (MIT); see [`NOTICE`](NOTICE).
+## Credits
+
+Built on [Pi](https://github.com/earendil-works/pi) by Earendil. The design of the kernels and the bridge comes from the `eval` tool of [oh-my-pi](https://github.com/can1357/oh-my-pi) by Can Bölük, under the MIT license; see [`NOTICE`](NOTICE). Cells are parsed with [acorn](https://github.com/acornjs/acorn), and SVG charts are rendered with [resvg-js](https://github.com/thx/resvg-js).
